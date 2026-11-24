@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ENGLISH MASTER - Học từ vựng, tra cứu phát âm và luyện tiếng Anh mỗi ngày.">
+  <title>ENGLISH MASTER | Học tiếng Anh mỗi ngày</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#" data-page="home"><span class="brand-mark">E</span><span>ENGLISH<span class="brand-light">MASTER</span></span></a>
+    <div class="side-label">MENU</div>
+    <nav>
+      <button class="nav-link active" data-page="home"><span>⌂</span> Tổng quan</button>
+      <button class="nav-link" data-page="dictionary"><span>⌕</span> Từ điển</button>
+      <button class="nav-link" data-page="learn"><span>▤</span> Học từ vựng</button>
+      <button class="nav-link" data-page="quiz"><span>✎</span> Kiểm tra</button>
+      <button class="nav-link" data-page="favorites"><span>♡</span> Từ yêu thích</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="mini-card"><div class="mini-icon">✦</div><b>Học một chút mỗi ngày!</b><p>Duy trì thói quen để tiến bộ từng ngày.</p></div>
+      <div class="profile"><div class="avatar">EM</div><div><b>Người học</b><small>Thành viên</small></div></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Mở menu">☰</button>
+      <div class="breadcrumb">ENGLISH MASTER <span>/</span> <b id="crumb">Tổng quan</b></div>
+      <div class="top-actions"><span class="today" id="today"></span><div class="top-avatar">EM</div></div>
+    </header>
+    <div class="content">
+      <section class="page active" id="page-home">
+        <div class="welcome">
+          <div><div class="eyebrow">YOUR ENGLISH JOURNEY STARTS HERE</div><h1>Chào mừng bạn trở lại! <span>✦</span></h1><p>Mỗi từ mới là một bước tiến gần hơn đến sự thành thạo.</p></div>
+          <div class="welcome-art"><div class="art-circle">Aa</div><span class="float f1">✦</span><span class="float f2">文</span><span class="float f3">ABC</span></div>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Từ đã học</span><span class="stat-icon purple">▤</span></div><strong id="learnedCount">0</strong><small>Từ vựng đã đánh dấu hoàn thành</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Từ yêu thích</span><span class="stat-icon pink">♡</span></div><strong id="favoriteCount">0</strong><small>Bộ sưu tập từ của bạn</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Bài kiểm tra</span><span class="stat-icon blue">✎</span></div><strong id="quizCount">0</strong><small>Lượt kiểm tra đã hoàn thành</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Điểm cao nhất</span><span class="stat-icon yellow">★</span></div><strong id="bestScore">0%</strong><small>Kết quả tốt nhất của bạn</small></article>
+        </div>
+        <div class="section-heading"><div><div class="eyebrow">KEEP YOUR MOMENTUM</div><h2>Tiếp tục học tập</h2></div><button class="text-button" data-go="learn">Học ngay →</button></div>
+        <div class="home-grid">
+          <article class="panel daily-panel"><div class="panel-head"><div><span class="pill">TỪ VỰNG HÔM NAY</span><h3>Word of the day</h3></div><span class="sparkle">✦</span></div><div id="wordOfDay"></div></article>
+          <article class="panel progress-panel"><div class="panel-head"><div><span class="pill green-pill">YOUR PROGRESS</span><h3>Tiến độ học tập</h3></div><span class="progress-number" id="progressPercent">0%</span></div><div class="progress-track"><div id="progressBar"></div></div><p id="progressText">Bạn đã học 0 từ trong danh sách mẫu.</p><div class="level-chips"><span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span></div></article>
+        </div>
+        <div class="section-heading"><div><div class="eyebrow">EXPLORE</div><h2>Khám phá ENGLISH MASTER</h2></div></div>
+        <div class="feature-grid">
+          <button class="feature-card" data-go="dictionary"><span class="feature-icon purple">⌕</span><b>Tra từ điển</b><small>Tìm nghĩa, phiên âm và phát âm</small><span class="feature-arrow">↗</span></button>
+          <button class="feature-card" data-go="learn"><span class="feature-icon green">▤</span><b>Flashcard</b><small>Ghi nhớ từ mới bằng thẻ học</small><span class="feature-arrow">↗</span></button>
+          <button class="feature-card" data-go="quiz"><span class="feature-icon orange">✎</span><b>Kiểm tra</b><small>Ôn tập và đánh giá kiến thức</small><span class="feature-arrow">↗</span></button>
+        </div>
+      </section>
+
+      <section class="page" id="page-dictionary">
+        <div class="page-title"><div class="eyebrow">ENGLISH WORD LOOKUP</div><h1>Từ điển tiếng Anh</h1><p>Tra cứu từ vựng, phiên âm, định nghĩa và ví dụ.</p></div>
+        <div class="search-box"><span>⌕</span><input id="wordSearch" placeholder="Nhập từ tiếng Anh, ví dụ: beautiful..." autocomplete="off"><button id="searchBtn">Tra cứu</button></div>
+        <div class="search-hint">Thử tìm: <button class="suggestion">beautiful</button><button class="suggestion">achieve</button><button class="suggestion">knowledge</button></div>
+        <div id="dictionaryResult" class="dictionary-result"><div class="empty-state"><div>⌕</div><h3>Bạn muốn tra từ nào?</h3><p>Nhập một từ tiếng Anh để xem kết quả từ điển.</p></div></div>
+      </section>
+
+      <section class="page" id="page-learn">
+        <div class="page-title"><div class="eyebrow">BUILD YOUR VOCABULARY</div><h1>Học từ vựng</h1><p>Lật thẻ, ghi nhớ và đánh dấu những từ bạn đã thành thạo.</p></div>
+        <div class="learn-toolbar"><div class="filter-group"><label for="levelFilter">Trình độ</label><select id="levelFilter"><option value="all">Tất cả cấp độ</option><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option></select></div><div class="card-count" id="cardCount">1 / 1</div></div>
+        <div class="flashcard-wrap"><button class="round-arrow" id="prevCard" aria-label="Từ trước">←</button><div class="flashcard" id="flashcard"><div class="flashcard-inner"><div class="flash-front"><span class="pill" id="flashLevel">A1</span><div class="flash-word" id="flashWord">Hello</div><div class="flash-phonetic" id="flashPhonetic">/həˈləʊ/</div><button class="outline-button" id="flipCard">Hiện nghĩa <span>↻</span></button></div><div class="flash-back"><span class="pill green-pill">MEANING</span><div class="flash-word meaning-word" id="flashMeaning">Xin chào</div><p id="flashExample">Hello, how are you?</p><small id="flashExampleVi">Xin chào, bạn khỏe không?</small><button class="outline-button" id="backCard">Quay lại <span>↻</span></button></div></div></div><button class="round-arrow" id="nextCard" aria-label="Từ tiếp theo">→</button></div>
+        <div class="flash-actions"><button class="secondary-button" id="speakCard">🔊 Phát âm</button><button class="secondary-button" id="favoriteCard">♡ Yêu thích</button><button class="primary-button" id="markLearned">✓ Đã thuộc từ này</button></div>
+        <div class="tip-box"><span>✦</span><div><b>Mẹo học tập</b><p>Hãy đọc từ mới thành tiếng, tự đặt một câu và ôn lại sau 1 ngày để ghi nhớ lâu hơn.</p></div></div>
+      </section>
+
+      <section class="page" id="page-quiz">
+        <div class="page-title"><div class="eyebrow">TEST YOUR KNOWLEDGE</div><h1>Kiểm tra từ vựng</h1><p>Chọn đáp án đúng để kiểm tra khả năng ghi nhớ của bạn.</p></div>
+        <div class="quiz-panel" id="quizPanel"><div class="quiz-intro"><div class="quiz-illustration">✎</div><h2>Sẵn sàng thử thách?</h2><p>Mỗi lượt gồm 10 câu hỏi ngẫu nhiên từ danh sách từ vựng mẫu.</p><button class="primary-button" id="startQuiz">Bắt đầu kiểm tra →</button></div></div>
+      </section>
+
+      <section class="page" id="page-favorites">
+        <div class="page-title"><div class="eyebrow">YOUR PERSONAL COLLECTION</div><h1>Từ yêu thích <span class="heart-title">♡</span></h1><p>Những từ bạn đã lưu để xem lại và ôn tập.</p></div>
+        <div class="favorites-list" id="favoritesList"></div>
+      </section>
+      <footer>© 2026 ENGLISH MASTER <span>Học mỗi ngày, giỏi mỗi ngày.</span></footer>
+    </div>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
